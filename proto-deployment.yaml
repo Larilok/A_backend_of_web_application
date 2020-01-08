@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: D:\Programming\Code\Node\Architecture\kompose.exe convert
+    kompose.version: 1.19.0 (f63a961c)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: proto
+  name: proto
+spec:
+  replicas: 2
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: D:\Programming\Code\Node\Architecture\kompose.exe convert
+        kompose.version: 1.19.0 (f63a961c)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: proto
+    spec:
+      containers:
+      - image: architecture_proto
+        name: proto
+        resources: {}
+      restartPolicy: Always
+status: {}

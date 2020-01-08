@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema>
+    <column comment="" default="" key="false" label="Id" length="-1" nullable="false" originalDbColumnName="Id"
+            originalLength="-1" pattern="" precision="-1" talendType="id_Integer" type=""/>
+    <column comment="" default="" key="false" label="Area_name" length="22" nullable="true"
+            originalDbColumnName="Area_name" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0"
+            talendType="id_String"/>
+    <column comment="" default="" key="false" label="Inner__Outer_London" length="12" nullable="true"
+            originalDbColumnName="Inner__Outer_London" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0"
+            talendType="id_String"/>
+    <column comment="" default="" key="false" label="GLA_Population_Estimate_2016" length="10" nullable="true"
+            originalDbColumnName="GLA_Population_Estimate_2016" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="GLA_Household_Estimate_2016" length="12" nullable="true"
+            originalDbColumnName="GLA_Household_Estimate_2016" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Inland_Area__Hectares_" length="12" nullable="true"
+            originalDbColumnName="Inland_Area__Hectares_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Population_density__per_hectare__2016" length="5" nullable="true"
+            originalDbColumnName="Population_density__per_hectare__2016" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Average_Age__2016" length="4" nullable="true"
+            originalDbColumnName="Average_Age__2016" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0"
+            talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Proportion_of_population_aged_0_15__2016" length="4"
+            nullable="true" originalDbColumnName="Proportion_of_population_aged_0_15__2016" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Proportion_of_population_of_working_age__2016" length="4"
+            nullable="true" originalDbColumnName="Proportion_of_population_of_working_age__2016" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Proportion_of_population_aged_65_and_over__2016" length="4"
+            nullable="true" originalDbColumnName="Proportion_of_population_aged_65_and_over__2016" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Net_internal_migration__2014_" length="6" nullable="true"
+            originalDbColumnName="Net_internal_migration__2014_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Net_international_migration__2014_" length="6" nullable="true"
+            originalDbColumnName="Net_international_migration__2014_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Net_natural_change__2014_" length="6" nullable="true"
+            originalDbColumnName="Net_natural_change__2014_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="__of_resident_population_born_abroad__2014_" length="4"
+            nullable="true" originalDbColumnName="__of_resident_population_born_abroad__2014_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Largest_migrant_population_by_country_of_birth__2011_" length="13"
+            nullable="true" originalDbColumnName="Largest_migrant_population_by_country_of_birth__2011_"
+            originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="__of_largest_migrant_population__2011_" length="4" nullable="true"
+            originalDbColumnName="__of_largest_migrant_population__2011_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Second_largest_migrant_population_by_country_of_birth__2011_"
+            length="32" nullable="true"
+            originalDbColumnName="Second_largest_migrant_population_by_country_of_birth__2011_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="__of_second_largest_migrant_population__2011_" length="3"
+            nullable="true" originalDbColumnName="__of_second_largest_migrant_population__2011_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Third_largest_migrant_population_by_country_of_birth__2011_"
+            length="13" nullable="true"
+            originalDbColumnName="Third_largest_migrant_population_by_country_of_birth__2011_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_String"/>
+    <column comment="" default="" key="false" label="__of_third_largest_migrant_population__2011_" length="3"
+            nullable="true" originalDbColumnName="__of_third_largest_migrant_population__2011_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="__people_aged_3__whose_main_language_is_not_English__2011_Census_"
+            length="4" nullable="true"
+            originalDbColumnName="__people_aged_3__whose_main_language_is_not_English__2011_Census_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Employment_rate______2015_" length="4" nullable="true"
+            originalDbColumnName="Employment_rate______2015_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Male_employment_rate__2015_" length="4" nullable="true"
+            originalDbColumnName="Male_employment_rate__2015_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Female_employment_rate__2015_" length="4" nullable="true"
+            originalDbColumnName="Female_employment_rate__2015_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Unemployment_rate__2015_" length="4" nullable="true"
+            originalDbColumnName="Unemployment_rate__2015_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Youth_Unemployment__claimant__rate_18_24__Dec_14_" length="3"
+            nullable="true" originalDbColumnName="Youth_Unemployment__claimant__rate_18_24__Dec_14_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Proportion_of_16_18_year_olds_who_are_NEET______2014_" length="3"
+            nullable="true" originalDbColumnName="Proportion_of_16_18_year_olds_who_are_NEET______2014_"
+            originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false"
+            label="Proportion_of_the_working_age_population_who_claim_out_of_work_benefits______Aug_2015_" length="4"
+            nullable="true"
+            originalDbColumnName="Proportion_of_the_working_age_population_who_claim_out_of_work_benefits______Aug_2015_"
+            originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="__working_age_with_a_disability__2015_" length="4" nullable="true"
+            originalDbColumnName="__working_age_with_a_disability__2015_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Proportion_of_working_age_people_with_no_qualifications_____2015"
+            length="4" nullable="true"
+            originalDbColumnName="Proportion_of_working_age_people_with_no_qualifications_____2015" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false"
+            label="Proportion_of_working_age_with_degree_or_equivalent_and_above_____2015" length="4" nullable="true"
+            originalDbColumnName="Proportion_of_working_age_with_degree_or_equivalent_and_above_____2015"
+            originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Gross_Annual_Pay___2015_" length="8" nullable="true"
+            originalDbColumnName="Gross_Annual_Pay___2015_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Gross_Annual_Pay___Male__2015_" length="8" nullable="true"
+            originalDbColumnName="Gross_Annual_Pay___Male__2015_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Gross_Annual_Pay___Female__2015_" length="8" nullable="true"
+            originalDbColumnName="Gross_Annual_Pay___Female__2015_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Modelled_Household_median_income_estimates_2012_13" length="9"
+            nullable="true" originalDbColumnName="Modelled_Household_median_income_estimates_2012_13" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Number_of_jobs_by_workplace__2014_" length="10" nullable="true"
+            originalDbColumnName="Number_of_jobs_by_workplace__2014_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="__of_employment_that_is_in_public_sector__2014_" length="6"
+            nullable="true" originalDbColumnName="__of_employment_that_is_in_public_sector__2014_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Number_of_active_businesses__2014" length="9" nullable="true"
+            originalDbColumnName="Number_of_active_businesses__2014" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Crime_rates_per_thousand_population_2014_15" length="5"
+            nullable="true" originalDbColumnName="Crime_rates_per_thousand_population_2014_15" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Median_House_Price__2014" length="9" nullable="true"
+            originalDbColumnName="Median_House_Price__2014" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Average_Band_D_Council_Tax_charge______2015_16" length="4"
+            nullable="true" originalDbColumnName="Average_Band_D_Council_Tax_charge______2015_16" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="New_Homes__net__2014_15__provisional_" length="9" nullable="true"
+            originalDbColumnName="New_Homes__net__2014_15__provisional_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Homes_Owned_outright___2014___" length="4" nullable="true"
+            originalDbColumnName="Homes_Owned_outright___2014___" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Being_bought_with_mortgage_or_loan___2014___" length="4"
+            nullable="true" originalDbColumnName="Being_bought_with_mortgage_or_loan___2014___" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Rented_from_Local_Authority_or_Housing_Association___2014___"
+            length="4" nullable="true"
+            originalDbColumnName="Rented_from_Local_Authority_or_Housing_Association___2014___" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Rented_from_Private_landlord___2014___" length="4" nullable="true"
+            originalDbColumnName="Rented_from_Private_landlord___2014___" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="__of_area_that_is_Greenspace__2005" length="4" nullable="true"
+            originalDbColumnName="__of_area_that_is_Greenspace__2005" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Number_of_cars___2011_Census_" length="12" nullable="true"
+            originalDbColumnName="Number_of_cars___2011_Census_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Number_of_cars_per_household___2011_Census_" length="3"
+            nullable="true" originalDbColumnName="Number_of_cars_per_household___2011_Census_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false"
+            label="Achievement_of_5_or_more_A___C_grades_at_GCSE_or_equivalent_including_English_and_Maths__2013_14"
+            length="4" nullable="true"
+            originalDbColumnName="Achievement_of_5_or_more_A___C_grades_at_GCSE_or_equivalent_including_English_and_Maths__2013_14"
+            originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="__of_pupils_whose_first_language_is_not_English__2015_" length="4"
+            nullable="true" originalDbColumnName="__of_pupils_whose_first_language_is_not_English__2015_"
+            originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="__children_living_in_out_of_work_households__2014_" length="4"
+            nullable="true" originalDbColumnName="__children_living_in_out_of_work_households__2014_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Male_life_expectancy___2012_14_" length="4" nullable="true"
+            originalDbColumnName="Male_life_expectancy___2012_14_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Female_life_expectancy___2012_14_" length="4" nullable="true"
+            originalDbColumnName="Female_life_expectancy___2012_14_" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Life_satisfaction_score_2011_14__out_of_10_" length="4"
+            nullable="true" originalDbColumnName="Life_satisfaction_score_2011_14__out_of_10_" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Childhood_Obesity_Prevalance_____2014_15" length="4"
+            nullable="true" originalDbColumnName="Childhood_Obesity_Prevalance_____2014_15" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="People_aged_17__with_diabetes____" length="3" nullable="true"
+            originalDbColumnName="People_aged_17__with_diabetes____" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Mortality_rate_from_causes_considered_preventable_2012_14"
+            length="5" nullable="true" originalDbColumnName="Mortality_rate_from_causes_considered_preventable_2012_14"
+            originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Proportion_of_seats_won_by_Conservatives_in_2014_election"
+            length="4" nullable="true" originalDbColumnName="Proportion_of_seats_won_by_Conservatives_in_2014_election"
+            originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Proportion_of_seats_won_by_Labour_in_2014_election" length="5"
+            nullable="true" originalDbColumnName="Proportion_of_seats_won_by_Labour_in_2014_election" originalLength="0"
+            pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Proportion_of_seats_won_by_Lib_Dems_in_2014_election" length="4"
+            nullable="true" originalDbColumnName="Proportion_of_seats_won_by_Lib_Dems_in_2014_election"
+            originalLength="0" pattern="&quot;dd-MM-yyyy&quot;" precision="0" talendType="id_Double"/>
+    <column comment="" default="" key="false" label="Turnout_at_2014_local_elections" length="4" nullable="true"
+            originalDbColumnName="Turnout_at_2014_local_elections" originalLength="0" pattern="&quot;dd-MM-yyyy&quot;"
+            precision="0" talendType="id_Double"/>
+</schema>
