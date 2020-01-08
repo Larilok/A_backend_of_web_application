@@ -6,8 +6,8 @@ let DBResponseBuilder = require('../Builders/DBResponseBuilder.js');
 const req = require('./requestMaker.js');
 
 
-const fetchQueryByFeatureValue = (value, callback) => {
-  return req.makeRequest(4243, "/search?query='feature=" + value + "'", (res) => {
+const fetchQueryByFeatureValue =  (value, callback) => {
+  return  req.makeRequest(4243, "/search?query='feature=" + value + "'", (res) => {
     const response = res.map(obj => {
       return obj = new
        DBResponseBuilder()
@@ -23,8 +23,8 @@ const fetchQueryByFeatureValue = (value, callback) => {
   });
 };
 
-const fetchQueryByCategory = (value, callback) => {
-  return req.makeRequest(4243, "/search?query='category=" + value + "'", (res) => {
+const fetchQueryByCategory =  (value, callback) => {
+  return  req.makeRequest(4243, "/search?query='category=" + value + "'", (res) => {
     const response = res.map(obj => {
       return obj = new
        DBResponseBuilder()
@@ -40,8 +40,8 @@ const fetchQueryByCategory = (value, callback) => {
   });
 };
 
-const fetchQueryById = (value, callback) => {
-  return req.makeRequest(4243, "/getPriceById:" + value, (res) => {
+const fetchQueryById =  (value, callback) => {
+  return  req.makeRequest(4243, "/getPriceById:" + value, (res) => {
     const response = res.map(obj => {
       return obj = new
        DBResponseBuilder()
@@ -58,11 +58,12 @@ const fetchQueryById = (value, callback) => {
 };
 
 const fetchInventory = (callback) => {
-    return req.makeRequest(4243, "/getInventory", (res) => {
-    let response = res.map(obj => {
-      return obj = new DBResponseBuilder().setId(obj.Id).setCategory(obj.Category).setName(obj.Name).setDescription(obj.Description).setUnitPrice(obj.UnitPrice).setAmInStock(obj.AmInStock).build();
-    });
-    return callback(response);
+    return req.makeRequestwDelay(4243, "/getInventory",3 , 5, (res) => {
+      if(res === []) return callback([])
+      let response = res.map(obj => {
+        return obj = new DBResponseBuilder().setId(obj.Id).setCategory(obj.Category).setName(obj.Name).setDescription(obj.Description).setUnitPrice(obj.UnitPrice).setAmInStock(obj.AmInStock).build();
+      });
+      return callback(response);
   });
 };
 

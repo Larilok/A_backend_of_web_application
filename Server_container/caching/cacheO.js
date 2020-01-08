@@ -24,9 +24,25 @@ const makeCache = (callback) => {
   let s2InvP = new Promise((res, rej) => {
     getSupplier2Cache((status) => res(status));
   });
-  Promise.all([mainInvP, s1InvP, s2InvP]).then(() => {callback()});
+  Promise.all([mainInvP, s1InvP, s2InvP]).then(() => {
+    callback(!cache.emptyCache() ? JSON.stringify("Successful caching"): JSON.stringify("Partial caching"))
+  });
   // Promise.all([s1P, s2P]).then(() => {callback(s1Inv); callback(s2Inv)});
 };
+
+const emptyCache = () => {
+    return cache.cache.mainInv.length > 0 &&
+    cache.cache.s1Inv.length > 0 &&
+    cache.cache.s2Inv.length > 0
+
+    // cache.cache.s1Inv.length === 0 &&
+    // cache.cache.s2Inv.length === 0 ? [1, 2]:
+
+    // cache.cache.s2Inv.length === 0 ? [2]:
+
+    // cache.cache.s1Inv.length === 0 ? [1]:
+    // [1,2,3]
+}
 
 const dropCache = (callback) => {
   cache.mainInv = [];
@@ -46,7 +62,8 @@ const getMainCache = (callback) => {
 };
 
 const getSupplier1Cache = (callback) => {
-  f1.fetchInventory((res) => {
+   f1.fetchInventory((res) => {
+    console.log(`----------------------- ${res}`);
     cache.s1Inv = res;
     callback(1);
   });
@@ -54,16 +71,18 @@ const getSupplier1Cache = (callback) => {
 
 const getSupplier2Cache = (callback) => {
   // let stop = 0;
-  let pagesP = new Promise((res, rej) => {
-    f2.fetchTableLength((length) => {
+  let pagesP = new Promise( (res, rej) => {
+     f2.fetchTableLength((length) => {
+      if(length === []) res([])
       const pages = Math.ceil(length/5000);
       res(pages);
     });
   }).then((pages) => {
+    if(pages === []) res(0)
     let promises = [];//[new Promise((res, rej) => setTimeout(() => res(1), 1000))];
     for (let i = 1;i < pages; i++) {
       promises.push(new Promise((res, rej) => {
-        f2.fetchInventoryPage(i, (result) => {
+         f2.fetchInventoryPage(i, (result) => {
             cache.s2Inv = cache.s2Inv.concat(result);
             res(1);
         });
@@ -136,5 +155,6 @@ module.exports = {
   getQueryById,
   getPriceList,
   getDetails,
-  getQueryByCategory
+  getQueryByCategory,
+  emptyCache
 };

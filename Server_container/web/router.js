@@ -7,16 +7,16 @@ let fs2 = require('../fetchers/fetcherSupplier2.js');
 let fsM = require('../shared/fetcherMain.js');
 const cache = require('../caching/cacheO.js');
 
-let route = (data, uri, callback) => {
+let route = async(data, uri, callback) => {
   console.log("IN route, data = ", data);
-  if(uri === '/cache' && data === '::ffff:127.0.0.1') {
-    cache.makeCache(() => callback(JSON.stringify("Successful caching")));
+  if(uri === '/cache') {
+    cache.makeCache(callback);
   }
-  if(uri === '/dropCache' && data === '::ffff:127.0.0.1') {
-    cache.dropCache(() => callback(JSON.stringify("Successful cache cleaning")));
+  if(uri === '/dropCache') {
+     cache.dropCache(() => callback(JSON.stringify("Successful cache cleaning")));
   }
-  if(uri === '/expireCacheEntries' && data === '::ffff:127.0.0.1') {
-    cache.expireCacheEntries(() => callback(JSON.stringify("Successfully expired cache entries")));
+  if(uri === '/expireCacheEntries') {
+     cache.expireCacheEntries(() => callback(JSON.stringify("Successfully expired cache entries")));
   }
 
   if(uri === '/getInventory'){
@@ -31,7 +31,7 @@ let route = (data, uri, callback) => {
         });
       }
     });
-    let supplier1 = new Promise((resolve, reject) => {
+    let supplier1 = new Promise(async (resolve, reject) => {
       if(cache.cache.s1Inv.length > 0) {
         console.log('Using cache for S1');
         resolve(cache.cache.s1Inv);

@@ -3,6 +3,7 @@
 let s1API = require('./supplier1API.js');
 
 let route = (uri, callback) => {
+  console.log(uri);
   if(uri === '/getInventory'){
     s1API.getInventory((result) => {
       // console.log('Done');

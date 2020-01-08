@@ -7,50 +7,13 @@ const fsM = require('./shared/fetcherMain.js');
 
 
 const route = (data, uri, callback) => {
+  console.log(uri);
   if(uri === '/login') {
     console.log('URI === login');
     cli.login({data: data}, callback);
-    // const detailsArr = data.split('&');
-    // let details = {};
-    // detailsArr.forEach(det => {
-    //   let data = det.split('=');
-    //   details[data[0]] = data[1];
-    // });
-    // const hash = crypto.createHash('sha256');
-    // hash.write(details.password + 'SecretSalt');
-    // // console.log('Hash');
-    // hash.end();
-    // const password = hash.read().toString().replace(/'/g, "_");
-    // // console.log(password);
-    // fsM.fetchUserByLogin(details.login, password, res => {
-    //   // console.log('Found');
-    //   console.log(res);
-    //   if(res.length > 0) {
-    //     //////////////////////////////////////////////GENERATE TOKEN
-
-    //     callback(JSON.stringify('User successfully logged in'));
-    //   }
-    // })
   }
   if(uri === '/signup') {//add admins? WTF does tttt tttt on signup crash everything?????
     cli.signup({data: data}, callback);
-    // const detailsArr = data.split('&');
-    // let details = {};
-    // detailsArr.forEach(det => {
-    //   let data = det.split('=');
-    //   details[data[0]] = data[1];
-    // });
-    // console.log(details);
-    // const hash = crypto.createHash('sha256');
-    // hash.write(details.password + 'SecretSalt');
-    // // console.log('Hash');
-    // hash.end();
-    // const password = hash.read().toString().replace(/'/g, "_");
-    // console.log(password);
-    // console.log('ADDING');
-    // fsM.addUser(details.login, password, 1, res => {
-    //   callback(JSON.stringify(res));
-    // });
     //privileges: 1 - User, 2- Admin
   }
   if(uri === '/signup.html') {

@@ -1,7 +1,6 @@
 FROM node
 WORKDIR /server
-COPY package*.json ./
-#RUN npm install pg
+COPY package*.json ./ 
 RUN npm install
 COPY . .
 WORKDIR web

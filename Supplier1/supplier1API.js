@@ -3,7 +3,7 @@
 let db = require('../db/db.js');
 
 const supplier1Pool = {
-  host: '127.0.0.1',
+  host: 'localhost',
   port: '5432',
   database: 'supply',
   user: 'supplier',
@@ -41,7 +41,9 @@ const getQueryById = (value, callback) => {
 }
 
 const getInventory = (callback) => {
+  console.log(base);
     return base.query(`select i."Id", i."Name", "UnitPrice", "Description", "AmInStock", c."Name" as "Category" from inventory i join categories c on i."CategoryId" = c."Id" left join stock s on i."Id" = s."InventoryId" order by i."Id"`, (res) => {
+      console.log(res);
       return callback(res);
     });
 }

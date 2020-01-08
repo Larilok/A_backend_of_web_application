@@ -1,11 +1,6 @@
 FROM node
 WORKDIR /auth
-COPY package*.json ./
-#RUN npm install pg
-#RUN npm install grpc
-#RUN npm install @grpc/proto-loader
-#CMD ["ls","-lah"]
-#RUN ls -lah
+COPY package*.json ./ 
 RUN npm install
 COPY . .
 WORKDIR Auth

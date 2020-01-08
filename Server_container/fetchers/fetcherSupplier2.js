@@ -7,8 +7,8 @@ const DBResponseBuilder = require('../Builders/DBResponseBuilder.js');
 const req = require('./requestMaker.js');
 
 
-const fetchPriceList = (callback) => {
-  return req.makeRequest(4244, '/price-list', (res) => {
+const fetchPriceList =  (callback) => {
+  return  req.makeRequest(4244, '/price-list', (res) => {
     let response = res.map(obj => {
       return obj = new 
         DBResponseBuilder()
@@ -24,8 +24,8 @@ const fetchPriceList = (callback) => {
   })
 };
 
-const fetchDetails = (id, callback) => {
-  return req.makeRequest(4244, '/details/' + id, (res) => {
+const fetchDetails =  (id, callback) => {
+  return  req.makeRequest(4244, '/details/' + id, (res) => {
     let response = res.map(obj => {
     return obj = new 
       DBResponseBuilder()
@@ -41,8 +41,8 @@ const fetchDetails = (id, callback) => {
   })
 };
 
-const fetchFiltered = (column, value, callback) => {
-  return req.makeRequest(4244, '/full', (res) => {
+const fetchFiltered =  (column, value, callback) => {
+  return  req.makeRequest(4244, '/full', (res) => {
     let response;
     if(column === "UnitPrice") {
       response = res.filter(obj => {return obj.Price === value});
@@ -67,16 +67,17 @@ const fetchFiltered = (column, value, callback) => {
 };
 
 const fetchInventory = (callback) => {
-  return req.makeRequest(4244, '/full', (res) => {
+  return req.makeRequestwDelay(4244, '/full', 3, 5, (res) => {
+    if(res === []) return callback([])
     let response = res.map(obj => {
-    return obj = new DBResponseBuilder().setId(obj.Id).setCategory(null).setName(obj.Name).setDescription(obj.Description).setUnitPrice(obj.Price).setAmInStock(obj.AmountInStock).build();
+      return obj = new DBResponseBuilder().setId(obj.Id).setCategory(null).setName(obj.Name).setDescription(obj.Description).setUnitPrice(obj.Price).setAmInStock(obj.AmountInStock).build();
     });
     return callback(response);
   })
 };
 
-const fetchInventoryPage = (page, callback) => {
-  return req.makeRequest(4244, '/full:'+page, (res) => {
+const fetchInventoryPage =  (page, callback) => {
+  return  req.makeRequest(4244, '/full:'+page, (res) => {
     let response = res.map(obj => {
     return obj = new DBResponseBuilder().setId(obj.Id).setCategory(null).setName(obj.Name).setDescription(obj.Description).setUnitPrice(obj.Price).setAmInStock(obj.AmountInStock).build();
     });
@@ -85,8 +86,9 @@ const fetchInventoryPage = (page, callback) => {
   })
 };
 
-const fetchTableLength = (callback) => {
-  return req.makeRequest(4244, '/length', (res) => {
+const fetchTableLength =  (callback) => {
+  return  req.makeRequestwDelay(4244, '/length', 3, 5, (res) => {
+    if(res === []) return callback([])
     return callback(res);
   });
 };
