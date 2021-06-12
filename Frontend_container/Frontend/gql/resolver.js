@@ -116,7 +116,7 @@ const resolvers = async (req, res) => {
     getPost: async ({ data }) => {
       const post = await getPost(data)
       console.log(post)
-      const user = await getUser(post.user_id)
+      const user = await getUser({ id: post.user_id })
       console.log(user)
       const category = await getCategory({ id: post.category_id })
       console.log(category)
