@@ -8,6 +8,21 @@ const selectTable = type => {
   return type === 'REQ' ? knex('posts_request') : knex('posts_offer')
 }
 
+const getCategory = async ({ id }) => {
+  console.log('getCategory ')
+  let result
+  try {
+    result = await knex('categories')
+      .where('id', id)
+      .select()
+    console.log(result)
+  } catch (err) {
+    console.log(err)
+    throw new Error(err)
+  }
+  return result[0]
+}
+
 const getCategories = async () => {
   console.log('getCategories ')
   let result
@@ -212,6 +227,7 @@ const getPostsByKeywordAndCategoryId = async ({
 }
 
 module.exports = {
+  getCategory,
   getCategories,
   getPost,
   addPost,

@@ -2,8 +2,9 @@ syntax = "proto3";
 
 service PostsService {
   rpc GetCategories(Empty) returns (Categories) {}
+  rpc GetCategory(Id) returns (Category) {}
   rpc GetPost(PostOperation) returns (Post) {}
-  rpc AddPost(NewPost) returns (PostId) {}
+  rpc AddPost(NewPost) returns (Result) {}
   rpc UpdatePost(UpdatePostOperation) returns (Result) {}
   rpc DeletePost(PostOperation) returns (Result) {}
   rpc ListPosts(Pagination) returns (PagiantionResult) {}
@@ -14,6 +15,10 @@ service PostsService {
 }
 
 message Empty {}
+
+message Id {
+  int32 id = 1;
+}
 
 message PostId {
   int32 id = 1;

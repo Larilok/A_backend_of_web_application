@@ -1,6 +1,7 @@
 const grpc = require('@grpc/grpc-js')
 
 const {
+  getCategory,
   getCategories,
   getPost,
   addPost,
@@ -12,6 +13,22 @@ const {
   getPostsByKeyword,
   getPostsByKeywordAndCategoryId
 } = require('../db/queries')
+
+const getCategoryRPC = async (call, callback) => {
+  console.log('Request: ', call.request)
+  try {
+    const categories = await getCategory(call.request)
+    callback(null, { categories })
+    console.log(categories)
+    return
+  } catch (err) {
+    console.log(err)
+    callback({
+      code: grpc.status.INVALID_ARGUMENT,
+      message: 'Category error'
+    })
+  }
+}
 
 const getCategoriesRPC = async (call, callback) => {
   console.log('Request: ', call.request)
@@ -174,6 +191,7 @@ const listPostsByKeywordAndCategoryIdRPC = async (call, callback) => {
 }
 module.exports = {
   getPostRPC,
+  getCategoryRPC,
   getCategoriesRPC,
   addPostRPC,
   updatePostRPC,

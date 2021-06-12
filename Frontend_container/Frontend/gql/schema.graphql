@@ -122,8 +122,10 @@ type User {
 
 type Post {
   id: ID!
-  category_id: Int
-  user_id: Int
+  category_name: String
+  user_phone: String
+  user_name: String
+  user_surname: String
   title: String
   description: String
   price: Int

@@ -36,6 +36,20 @@ const getCategories = () =>
     })
   })
 
+const getCategory = id =>
+  new Promise((res, rej) => {
+    console.log('getCategory func Client: ')
+    postsClient.GetCategory(id, (err, resp) => {
+      if (err) {
+        console.log('Error: ', err)
+        rej(err.message)
+        return
+      }
+      console.log(resp)
+      res(resp.categories)
+    })
+  })
+
 const getPost = postOp =>
   new Promise((res, rej) => {
     console.log('getPost func Client: ', postOp)
@@ -172,6 +186,7 @@ module.exports = {
   addPost,
   deletePost,
   updatePost,
+  getCategory,
   getCategories,
   listPosts,
   listPostsByUser,

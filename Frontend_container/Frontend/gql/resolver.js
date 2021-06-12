@@ -11,6 +11,7 @@ const {
   addPost,
   deletePost,
   updatePost,
+  getCategory,
   getCategories,
   listPosts,
   listPostsByUser,
@@ -113,7 +114,26 @@ const resolvers = async (req, res) => {
       return result
     },
     getPost: async ({ data }) => {
-      const result = await getPost(data)
+      const post = await getPost(data)
+      console.log(post)
+      const user = await getUser(post.user_id)
+      console.log(user)
+      const category = await getCategory({ id: post.category_id })
+      console.log(category)
+      const result = {
+        id: post.id,
+        category_name: category.name,
+        user_phone: user.phone,
+        user_name: user.name,
+        user_surname: user.surname,
+        title: post.title,
+        description: post.description,
+        price: post.price,
+        picture_url: post.picture_url,
+        is_active: post.is_active,
+        created_at: post.created_at,
+        updated_at: post.updated_at
+      }
       client.sendCookie()
       return result
     },
@@ -133,14 +153,14 @@ const resolvers = async (req, res) => {
     },
     listPostsByCategoryId: async ({ paginationByCategoryId }) => {
       console.log(paginationByCategoryId)
-      const result = await listPosts(paginationByCategoryId)
+      const result = await listPostsByCategoryId(paginationByCategoryId)
       console.log(result)
       client.sendCookie()
       return result
     },
     listPostsByKeyword: async ({ paginationByKeyword }) => {
       console.log(paginationByKeyword)
-      const result = await listPosts(paginationByKeyword)
+      const result = await listPostsByKeyword(paginationByKeyword)
       console.log(result)
       client.sendCookie()
       return result
@@ -149,7 +169,9 @@ const resolvers = async (req, res) => {
       paginationByKeywordAndCategoryId
     }) => {
       console.log(paginationByKeywordAndCategoryId)
-      const result = await listPosts(paginationByKeywordAndCategoryId)
+      const result = await listPostsByKeywordAndCategoryId(
+        paginationByKeywordAndCategoryId
+      )
       console.log(result)
       client.sendCookie()
       return result

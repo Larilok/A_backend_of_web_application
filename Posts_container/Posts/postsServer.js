@@ -3,6 +3,7 @@ const protoLoader = require('@grpc/proto-loader')
 
 const {
   getPostRPC,
+  getCategoryRPC,
   getCategoriesRPC,
   addPostRPC,
   updatePostRPC,
@@ -32,6 +33,7 @@ const postsService = protoDescriptor.PostsService
 const getServer = () => {
   const server = new grpc.Server()
   server.addService(postsService.service, {
+    GetCategory: getCategoryRPC,
     GetCategories: getCategoriesRPC,
     GetPost: getPostRPC,
     AddPost: addPostRPC,
