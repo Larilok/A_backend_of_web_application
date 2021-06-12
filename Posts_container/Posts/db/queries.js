@@ -1,5 +1,6 @@
 'use strict'
 
+const { Query } = require('pg')
 const config = require('../knexfile')
 
 const knex = require('knex')(config)
@@ -105,11 +106,11 @@ const deletePost = async ({ id, type }) => {
   return result[0]
 }
 
-const countPosts = async type => {
+const countPosts = async query => {
   console.log('CountPosts', type)
   let result
   try {
-    result = await selectTable(type).count({ total: 'id' })
+    result = await query()
     console.log(result)
   } catch (err) {
     console.log(err)
@@ -187,7 +188,10 @@ const getPostsByKeyword = async ({
       .andWhere('id', '>', page_num * limit)
       .limit(limit)
     console.log(posts)
-    total = await countPosts(type)
+    total = await countPosts(
+      async () =>
+        await selectTable(type).whereRaw("title ilike '%??%'", [keyword])
+    )
   } catch (err) {
     console.log(err)
     throw new Error(err)
