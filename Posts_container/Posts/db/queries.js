@@ -177,7 +177,7 @@ const getPostsByKeyword = async ({
   page_num = 0,
   limit = 20,
   type,
-  keyword
+  keyword = ''
 }) => {
   console.log('getPostsByKeyword ', page_num, limit, type, keyword)
   let posts, total
