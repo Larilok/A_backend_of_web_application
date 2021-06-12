@@ -65,7 +65,7 @@ input PaginationByKeyword {
   page_num: Int!
   limit: Int!
   type: PostType!
-  keyword: String!
+  keyword: String
 }
 
 input PaginationByKeywordAndCategoryId {
