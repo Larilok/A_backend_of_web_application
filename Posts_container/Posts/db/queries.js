@@ -100,7 +100,7 @@ const countPosts = async type => {
     console.log(err)
     throw new Error(err)
   }
-  return result[0]
+  return result[0].total
 }
 
 const getPosts = async ({ page_num = 0, limit = 20, type }) => {
