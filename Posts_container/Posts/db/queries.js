@@ -183,7 +183,7 @@ const getPostsByKeyword = async ({
   let posts, total
   try {
     posts = await selectTable(type)
-      .whereRaw("title like '%??%'", [keyword])
+      .whereRaw("title ilike '%??%'", [keyword])
       .andWhere('id', '>', page_num * limit)
       .limit(limit)
     console.log(posts)

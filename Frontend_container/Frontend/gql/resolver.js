@@ -160,7 +160,7 @@ const resolvers = async (req, res) => {
     },
     listPostsByKeyword: async ({ paginationByKeyword }) => {
       console.log(paginationByKeyword)
-      if (!paginationByKeyword.keyword) paginationByKeyword.keyword = ''
+      if (!paginationByKeyword.keyword) paginationByKeyword.keyword = '_'
       const result = await listPostsByKeyword(paginationByKeyword)
       console.log(result)
       client.sendCookie()
